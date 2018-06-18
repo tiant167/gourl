@@ -33,7 +33,7 @@ func helpInfo() {
 
 func main() {
 	args := os.Args[1:]
-	if args[0] == "--help" || args[0] == "-h" {
+	if len(args) == 0 || args[0] == "--help" || args[0] == "-h" {
 		helpInfo()
 		return
 	}
@@ -109,4 +109,3 @@ func main() {
 	}
 	fmt.Printf("%s", out.String())
 }
-

@@ -8,11 +8,17 @@ gourl, looks like curl
 
 ## How to use
 gourl [COMMAND]
+
 COMMAND list:
+
         --method [post|get], -m:                request method, eg: POST, GET
+        
         --body [string], -b, -d:                post request body
+        
         --header [string], -h, -H               request header
+        
         --json, -j              equals to -H 'Content-Type: application/json'
+        
         --uri, optional         request uri
 
 Examples:

@@ -49,6 +49,8 @@ func main() {
 			fallthrough
 		case "-b":
 			fallthrough
+		case "--data-binary":
+			fallthrough
 		case "--body":
 			request.Body = args[i+1]
 			i++
@@ -58,7 +60,7 @@ func main() {
 			fallthrough
 		case "--header":
 			headerKV := strings.Split(args[i+1], ":")
-			request.Headers[headerKV[0]] = headerKV[1]
+			request.Headers[headerKV[0]] = strings.Join(headerKV[1:], "")
 			i++
 		case "--uri":
 			i++
